@@ -52,7 +52,7 @@ int main()
     }
     */
 
-    divide(-500,5,10,7,3,10,result,10);
+    divide(-1,5,10,-4,5,10,result,10);
     
     cout << "Result: " << result << endl;
 

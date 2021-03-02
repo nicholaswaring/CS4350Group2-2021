@@ -35,15 +35,34 @@ bool divide(int c1, int n1, int d1, int c2, int n2, int d2, char result[], int l
 
     
     
-
-    if(c1 < 0){
+    
+    if((c1 < 0) && (c2 > 0)){
         neg = true;
-        c1= -c1;
+        c1 = -c1;
     }
-    if(c2 < 0){
+    if((c1 > 0) && (c2 < 0)){
         neg = true;
         c2 = -c2;
     }
+    if((c1 < 0) && (c2 < 0)){
+        neg = false;
+        c1 = -c1;
+        c2 = -c2;
+    }
+    if((n1 < 0) && (n2 > 0)){
+        neg = true;
+        n1 = -n1;
+    }
+    if((n1 > 0) && (n2 < 0)){
+        neg = true;
+        n2 = -n2;
+    }
+    if((n1 < 0) && (n2 < 0)){
+        neg = false;
+        n1 = -n1;
+        n2 = -n2;
+    }
+    
 
     if((c2 & n2) == 0){
         cerr << "Cannot Divide by 0" << endl;
